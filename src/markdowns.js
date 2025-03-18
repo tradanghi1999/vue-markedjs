@@ -114,18 +114,18 @@ This is a complex list:
 
 This is a table:
 
-| Vegetable | Description |
-|-----------|-------------|
-| Carrot    | A crunchy, orange root vegetable that is rich in vitamins and minerals. It is commonly used in soups, salads, and as a snack. |
-| Broccoli  | A green vegetable with tightly packed florets that is high in fiber, vitamins, and antioxidants. It can be steamed, boiled, stir-fried, or roasted. |
-| Spinach   | A leafy green vegetable that is dense in nutrients like iron, calcium, and vitamins. It can be eaten raw in salads or cooked in various dishes. |
-| Bell Pepper | A colorful, sweet vegetable available in different colors such as red, yellow, and green. It is often used in stir-fries, salads, or stuffed recipes. |
-| Tomato    | A juicy fruit often used as a vegetable in culinary preparations. It comes in various shapes, sizes, and colors and is used in salads, sauces, and sandwiches. |
-| Cucumber   | A cool and refreshing vegetable with a high water content. It is commonly used in salads, sandwiches, or as a crunchy snack. |
-| Zucchini | A summer squash with a mild flavor and tender texture. It can be sautéed, grilled, roasted, or used in baking recipes. |
-| Cauliflower | A versatile vegetable that can be roasted, steamed, mashed, or used to make gluten-free alternatives like cauliflower rice or pizza crust. |
-| Green Beans | Long, slender pods that are low in calories and rich in vitamins. They can be steamed, stir-fried, or used in casseroles and salads. |
-| Potato | A starchy vegetable available in various varieties. It can be boiled, baked, mashed, or used in soups, fries, and many other dishes. |
+| Vegetable   | Description | Nutritional Benefits | Common Uses | Texture | Taste |
+|------------|-------------|----------------------|-------------|---------|-------|
+| Carrot     | A crunchy, orange root vegetable that is rich in vitamins and minerals. | High in beta-carotene, fiber, and vitamin K. | Used in soups, salads, and as a snack. | Crunchy | Slightly sweet |
+| Broccoli   | A green vegetable with tightly packed florets that is high in fiber, vitamins, and antioxidants. | Rich in vitamin C, K, and fiber. | Steamed, boiled, stir-fried, or roasted. | Firm yet tender | Mildly bitter |
+| Spinach    | A leafy green vegetable that is dense in nutrients like iron, calcium, and vitamins. | High in iron, calcium, and antioxidants. | Eaten raw in salads or cooked in various dishes. | Soft when cooked, crisp when raw | Mild, slightly earthy |
+| Bell Pepper | A colorful, sweet vegetable available in different colors such as red, yellow, and green. | High in vitamin C and antioxidants. | Used in stir-fries, salads, or stuffed recipes. | Crunchy | Sweet |
+| Tomato     | A juicy fruit often used as a vegetable in culinary preparations. | Good source of vitamin C, potassium, and lycopene. | Used in salads, sauces, and sandwiches. | Juicy | Sweet and tangy |
+| Cucumber   | A cool and refreshing vegetable with a high water content. | Hydrating, low in calories, and contains vitamin K. | Used in salads, sandwiches, or as a crunchy snack. | Crisp | Mild, refreshing |
+| Zucchini   | A summer squash with a mild flavor and tender texture. | Low in calories, high in fiber and vitamin C. | Sautéed, grilled, roasted, or used in baking. | Soft yet firm | Mild, slightly sweet |
+| Cauliflower | A versatile vegetable that can be roasted, steamed, mashed, or used to make gluten-free alternatives. | Rich in fiber, vitamin C, and antioxidants. | Used for cauliflower rice, pizza crust, and more. | Firm but tender when cooked | Mild, slightly nutty |
+| Green Beans | Long, slender pods that are low in calories and rich in vitamins. | Good source of fiber, vitamin C, and folate. | Steamed, stir-fried, or used in casseroles and salads. | Crisp when raw, tender when cooked | Mild, slightly grassy |
+| Potato     | A starchy vegetable available in various varieties. | High in potassium, fiber, and vitamin C. | Boiled, baked, mashed, or used in soups and fries. | Soft when cooked | Mild, slightly earthy |
 
 This is a mermaid diagram:
 

@@ -1,9 +1,9 @@
 <template>
-  <div class="markdown-body" v-html="md"></div>
+  <div class="markdown-body"  v-html="md"></div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue' 
 import { marked, Marked } from 'marked';
 import markedKatex from "marked-katex-extension";
 //import markedMermaid from "marked-mermaid";
@@ -23,16 +23,19 @@ export default {
   data() {
     const marked = new Marked();
     const renderer = {
-      code(tokens) {
+      code(token) {
         // istanbul ignore next
-        console.log(tokens);
+        console.log(token);
         return `<div class="code-wrapper">
           <div class="code-header">
-            <div>${tokens.lang}</div>
+            <div>${token.lang}</div>
             <div class="code-copy-btn"onclick="copyCode(this)">Copy</div>
           </div>
-          <pre><code class="hljs">${tokens.text}</code></pre>
+          <pre><code class="hljs">${token.text}</code></pre>
         </div>`;
+      },
+      image(token) {
+        return `<img src="${token.href}" alt="${token.text + "1"}" />`;
       },
     }
 
@@ -96,6 +99,15 @@ mounted() {
 
 .code-copy-btn{
   cursor: pointer;
+}
+.markdown-body {
+  padding: 0 350px;
+}
+
+/* Add this CSS */
+.markdown-body table {
+  overflow-x: auto;
+  display: block;
 }
 </style>
 
