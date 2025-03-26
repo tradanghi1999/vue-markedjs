@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import Unified from './components/UnifiedMarkdown.vue'
 import Markedjs from './components/MarkedjsMarkdown.vue'
+import ChatBox from './components/ChatBox.vue'
+import StreamingMarkdown from './components/StreamingMarkdown.vue'
+import StreamingMarkedjs from './components/StreamingMarkedjs.vue'
 
 const routes = [
   {
@@ -18,6 +21,21 @@ const routes = [
     path: '/unified',
     name: 'Unified',
     component: Unified
+  },
+  {
+    path: '/chatbox',
+    name: 'ChatBox',
+    component: ChatBox
+  },
+  {
+    path: '/streaming',
+    name: 'StreamingMarkdown',
+    component: StreamingMarkdown
+  },
+  {
+    path: '/streaming-markedjs',
+    name: 'StreamingMarkedjs',
+    component: StreamingMarkedjs
   }
 ]
 

@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const math_md =`Lift( $L$ ) can be determined by Lift Coefficient ( $C_L$ ) like the following
 equation.
 
@@ -147,7 +148,7 @@ $$
 L = \\frac{1}{2} \\rho v^2 S C_L
 $$
 
-Lift($L$) can be determined by Lift Coefficient ($C_L$) like the following
+Lift( $L$ ) can be determined by Lift Coefficient ( $C_L$ ) like the following
 equation.
 
 
@@ -224,6 +225,14 @@ alert(message);
 ## Inline code
 
 This web site is using \`markedjs/marked\`.
+
+## Math Enhanced:
+Chu vi hình tròn \\( C = 2\\pi r \\).
+
+\\[
+\\Delta t' = \\frac{\\Delta t}{\\sqrt{1 - \\frac{v^2}{c^2}}}
+\\]
+
 
 
 ## Video

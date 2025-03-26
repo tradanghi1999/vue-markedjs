@@ -1,13 +1,15 @@
 <template>
-  <VueMarkdown :class="`markdown-body`" :markdown="markdown" :sanitize="false" :rehypeOptions="{ allowDangerousHtml: true }"
-    :remarkPlugins="[remarkGfm, remarkMath]" :rehypePlugins="[rehypeKatex, rehypeHighlight, rehypeRaw]">
+  <VueMarkdown :class="`markdown-body`" :markdown="markdown" :sanitize="false"
+    :rehypeOptions="{ allowDangerousHtml: true }" :remarkPlugins="[remarkGfm, remarkMath]"
+    :rehypePlugins="[rehypeKatex, rehypeHighlight, rehypeRaw]">
     <template #code="{ children, ...props }">
       <template v-if="!props.inline">
-        <div style="background-color: white; color: black; border-radius: 5px; display: flex; flex-direction: column; gap: 1px;">
+        <div
+          style="background-color: white; color: black; border-radius: 5px; display: flex; flex-direction: column; gap: 1px;">
           <div style="display: flex; justify-content: space-between; padding: 5px 10px;">
-            <div>{{ props.class[1].replaceAll("language-","") }}</div>
+            <div>{{ props.class[1].replaceAll("language-", "") }}</div>
             <div style="cursor: pointer;" @click="copyToClipboard(props)">{{
-            copyStatus }}</div>
+              copyStatus }}</div>
           </div>
           <code :class="`hljs ${props.class[1]}`">
             <Component :is="children" />
@@ -31,11 +33,12 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import rehypeHighlight from 'rehype-highlight'
 import rehypeReact from 'rehype-react'
+import rehypeMathJaxBrowser from 'rehype-mathjax/browser'
+import rehypeMathJax from 'rehype-mathjax'
 import { full_md } from '../markdowns'
 import { h, Fragment } from 'vue'
 import rehypeRaw from 'rehype-raw'
-import 'highlight.js/styles/github.css'
-import "../markdown.css"
+
 
 // import {
 //   BIconCopy,
@@ -57,20 +60,31 @@ export default {
       stylePropertyNameCase: 'dom'
     }
 
+    const replaceMathDelimiters = (content) => {
+      return content
+        .replace(/\\\(/g, "$")
+        .replace(/\\\)/g, "$")
+        .replace(/\\\[/g, "\n$$")
+        .replace(/\\\]/g, "$$\n");
+    };
+
+
     return {
-      markdown: full_md,
+      markdown: replaceMathDelimiters(full_md),
       remarkGfm: remarkGfm,
       remarkMath: remarkMath,
       rehypeKatex: rehypeKatex,
       rehypeHighlight: rehypeHighlight,
       rehypeReact: rehypeReact,
       rehypeRaw: rehypeRaw,
+      rehypeMathJaxBrowser: rehypeMathJaxBrowser,
+      rehypeMathJax: rehypeMathJax,
       options: options,
       copyStatus: 'copy'
     }
   },
   methods: {
-    
+
     copyToClipboard(content) {
       this.copyStatus = 'copied'
       console.log(content)
@@ -82,7 +96,4 @@ export default {
 }
 </script>
 
-<style>
-
-
-</style>
+<style></style>
