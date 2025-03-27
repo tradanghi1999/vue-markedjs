@@ -45,6 +45,8 @@ const options = ref({
             mentionDenotationChars: ["/"],
             showDenotationChar: true,
             defaultMenuOrientation: "top",
+            
+            // thêm biến searchTerm vào hàm renderItem để tạo rule hiển thị highlight
             renderItem: function (item) {
                 const div = document.createElement('div');
                 div.className = 'mention-item';
