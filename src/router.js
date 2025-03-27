@@ -5,6 +5,7 @@ import Markedjs from './components/MarkedjsMarkdown.vue'
 import ChatBox from './components/ChatBox.vue'
 import StreamingMarkdown from './components/StreamingMarkdown.vue'
 import StreamingMarkedjs from './components/StreamingMarkedjs.vue'
+import ChatBoxOffical from './components/ChatBoxOffical.vue'
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/streaming-markedjs',
     name: 'StreamingMarkedjs',
     component: StreamingMarkedjs
+  },
+  {
+    path: '/chatbox-offical',
+    name: 'ChatBoxOffical',
+    component: ChatBoxOffical
   }
 ]
 

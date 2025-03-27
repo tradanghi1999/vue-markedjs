@@ -7,7 +7,7 @@
       <router-link to="/chatbox">ChatBox</router-link>  |
       <router-link to="/streaming">Streaming</router-link>
       <router-link to="/streaming-markedjs">Streaming Markedjs</router-link>
-
+      <router-link to="/chatbox-offical">Chatbox official</router-link>
     </nav>
     <router-view></router-view>
   </div>
