@@ -1,6 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 const webpack = require('webpack');
 
+
 module.exports = defineConfig({
   transpileDependencies: true,
   configureWebpack: {
@@ -12,4 +13,13 @@ module.exports = defineConfig({
       }),
     ],
   },
-})
+  chainWebpack: (config) => {
+    // Thêm rule xử lý file Markdown (.md) với raw-loader
+    config.module
+      .rule('markdown')
+      .test(/\.md$/)
+      .use('raw-loader')
+      .loader('raw-loader')
+      .end();
+  }
+});

@@ -50,6 +50,113 @@ A note[^1]
 
 
 export const full_md = `
+# Non standard Markdown
+
+## Claude
+
+1. Vai trò cốt lõi
+    1.1. Giảng dạy tiếng Anh chuyên nghiệp
+    1.2. Phát triển kỹ năng ngôn ngữ toàn diện
+    1.3. Đánh giá và điều chỉnh phương pháp giảng dạy
+
+2. Mục tiêu và Mục đích
+   2.1. Kiến thức ngữ pháp
+       2.1.1. Cơ bản
+       2.1.2. Nâng cao
+   2.2. Kỹ năng giao tiếp
+       2.2.1. Tự nhiên
+       2.2.2. Hiệu quả
+   2.3. Môi trường học tập
+       2.3.1. Tích cực
+       2.3.2. Thực tiễn
+
+3. Nhiệm vụ và Trách nhiệm
+   3.1. Thiết kế bài giảng
+       3.1.1. Phù hợp trình độ
+       3.1.2. Đáp ứng nhu cầu
+   3.2. Đánh giá học tập
+       3.2.1. Theo dõi tiến độ
+       3.2.2. Phản hồi chi tiết
+   3.3. Phương pháp giảng dạy
+       3.3.1. Sáng tạo
+       3.3.2. Tương tác
+
+4. Kiến thức Chuyên môn
+   4.1. Ngôn ngữ học
+       4.1.1. Ngữ pháp
+       4.1.2. Từ vựng
+       4.1.3. Phát âm
+   4.2. Công nghệ giảng dạy
+       4.2.1. Trực tuyến
+       4.2.2. Trực tiếp
+   4.3. Phương pháp sư phạm
+       4.3.1. Hiện đại
+       4.3.2. Ứng dụng thực tế
+
+5. Đối tượng Học viên
+   5.1. Học sinh/Sinh viên
+   5.2. Nhân viên FMCG
+   5.3. Người học tiếng Anh giao tiếp
+
+6. Kênh Giao tiếp
+   6.1. Trực tiếp
+       6.1.1. Văn phòng
+       6.1.2. Trung tâm đào tạo
+   6.2. Trực tuyến
+       6.2.1. Zoom
+       6.2.2. Microsoft Teams
+       6.2.3. Google Meet
+   6.3. Hỗ trợ ngoài giờ
+       6.3.1. Email
+       6.3.2. Zalo
+       6.3.3. Viber
+
+7. Bản địa hóa và Văn hóa
+   7.1. Nội dung học tập
+       7.1.1. Ví dụ địa phương
+       7.1.2. Ngữ cảnh Việt Nam
+   7.2. Phương pháp tiếp cận
+       7.2.1. Tôn trọng văn hóa
+       7.2.2. Khuyến khích tham gia
+   7.3. Tích hợp chuyên ngành
+        7.3.1. Chủ đề FMCG
+        7.3.2. Tình huống thực tế
+
+## Other
+1. item 1
+2. item 2
+    a. item 2a
+	    I.  sub item I
+	    II. sub item II
+    e. item 2e
+7. item 7
+
+Tốt, tôi sẽ viết mô tả công việc cho vị trí Nhân Viên Tiếp Thị Kỹ Thuật Số (Digital Marketing Specialist):
+
+1. Mục Tiêu Công Việc
+• Phát triển và triển khai các chiến dịch tiếp thị kỹ thuật số toàn diện
+• Tăng cường nhận thức thương hiệu và tỷ lệ chuyển đổi
+
+2. Trách Nhiệm Chính
+• Quản lý các nền tảng mạng xã hội 
+• Xây dựng nội dung tiếp thị hấp dẫn
+• Phân tích hiệu quả chiến dịch qua các chỉ số metrics
+• Nghiên cứu xu hướng thị trường mới
+
+3. Yêu Cầu Kỹ Năng
+• Thành thạo Google Analytics, SEO
+• Kỹ năng viết sáng tạo
+• Hiểu biết sâu về các nền tảng số
+• Tiếng Anh giao tiếp tốt
+
+4. Quyền Lợi
+• Mức lương: Thỏa thuận
+• Môi trường làm việc năng động
+• Cơ hội phát triển nghề nghiệp
+
+Bạn thấy thế nào?
+
+
 # heading+
 
 This is the first paragraph.

@@ -6,6 +6,7 @@ import ChatBox from './components/ChatBox.vue'
 import StreamingMarkdown from './components/StreamingMarkdown.vue'
 import StreamingMarkedjs from './components/StreamingMarkedjs.vue'
 import ChatBoxOffical from './components/ChatBoxOffical.vue'
+import MaskedImage from './components/MaskedImage.vue'
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: '/chatbox-offical',
     name: 'ChatBoxOffical',
     component: ChatBoxOffical
+  },
+  {
+    path: '/masked-image',
+    name: 'MaskedImage',
+    component: MaskedImage
   }
 ]
 

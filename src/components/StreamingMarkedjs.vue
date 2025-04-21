@@ -9,10 +9,62 @@
 import { ref, computed, onMounted } from 'vue';
 import { Marked } from 'marked';
 import markedKatex from 'marked-katex-extension';
-import { full_md } from '../markdowns';
+//import { full_md } from '../markdowns';
 import { markedHighlight } from "marked-highlight";
 import hljs from 'highlight.js';
 import parenthesesKatex from '../parenthesesKatex.js';
+//import artifactContent from './artifact.md?raw';
+import responseContent from './response.md?raw';
+
+
+
+// Định nghĩa extension cho web_broswer
+const webBrowserExtension = {
+  name: "web_broswer",
+  level: "block",
+  start(src) {
+    // Tìm vị trí đầu tiên có thẻ <antartifact
+    return src.indexOf('<web_browser');
+  },
+  tokenizer(src) {
+    // Sử dụng regex để nhận dạng đoạn nội dung antartifact
+    //console.log(src)
+    const rule = /^<web_browser([^>]*)>([\s\S]*?)<\/web_browser>/;
+    const match = rule.exec(src);
+    //console.log("Match", match);
+    if (match) {
+      // Extract status and link from attributes
+      const statusMatch = match[1].match(/status="([^"]+)"/);
+      const status = statusMatch ? statusMatch[1] : '';
+      
+      const linkMatch = match[1].match(/link="([^"]+)"/);
+      const link = linkMatch ? linkMatch[1] : match[2].trim();
+
+      return {
+        type: 'web_broswer',
+        raw: match[0],
+        status: status,
+        link: link
+      };
+    }
+
+    return false;
+
+  },
+  renderer(token){
+    if (token != null) {
+      if (token.status === "start") {
+        // Nếu có subType, render nội dung bên trong thẻ <antartifact>
+        return `<p><strong>Browsing: ${token.link}</strong></p>`;
+      }
+      else if (token.status === "end") {
+        return `<p><strong>Browsed: ${token.link}</strong></p>`;
+      }
+      return `<p>Error using web browser</p>`
+    }
+  }
+}
+
 
 // Tạo instance của Marked và cấu hình các plugin
 const myMarked = new Marked();
@@ -45,6 +97,9 @@ const renderer = {
     },
 };
 
+myMarked.use({
+  extensions: [webBrowserExtension],
+})
 myMarked.use(markedKatex());
 myMarked.use(parenthesesKatex());
 myMarked.use(
@@ -68,7 +123,7 @@ const parsedMarkdown = computed(() => myMarked.parse(streamingMd.value));
 
 onMounted(() => {
     // Mô phỏng streaming bằng cách tách full_md thành các dòng
-    const lines = full_md.split('\n');
+    const lines = responseContent.split('\n');
     let index = 0;
     const interval = setInterval(() => {
         if (index < lines.length) {

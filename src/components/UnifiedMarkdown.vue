@@ -1,6 +1,7 @@
 <template>
   <VueMarkdown :class="`markdown-body`" :markdown="markdown" :sanitize="false"
-    :rehypeOptions="{ allowDangerousHtml: true }" :remarkPlugins="[remarkGfm, remarkMath]"
+    :rehypeOptions="{ allowDangerousHtml: true }" 
+    :remarkPlugins="[remarkGfm, remarkMath]"
     :rehypePlugins="[rehypeKatex, rehypeHighlight, rehypeRaw]">
     <template #code="{ children, ...props }">
       <template v-if="!props.inline">
@@ -38,7 +39,8 @@ import rehypeMathJax from 'rehype-mathjax'
 import { full_md } from '../markdowns'
 import { h, Fragment } from 'vue'
 import rehypeRaw from 'rehype-raw'
-
+import remarkPresetLintMarkdownStyleGuide from 'remark-preset-lint-markdown-style-guide'
+import remarkStringify from 'remark-stringify'
 
 // import {
 //   BIconCopy,
@@ -79,6 +81,8 @@ export default {
       rehypeRaw: rehypeRaw,
       rehypeMathJaxBrowser: rehypeMathJaxBrowser,
       rehypeMathJax: rehypeMathJax,
+      remarkPresetLintMarkdownStyleGuide: remarkPresetLintMarkdownStyleGuide,
+      remarkStringify: remarkStringify,
       options: options,
       copyStatus: 'copy'
     }
