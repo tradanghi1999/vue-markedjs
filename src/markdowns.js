@@ -50,6 +50,139 @@ A note[^1]
 
 
 export const full_md = `
+# TeamPal Math error
+
+Để tính tổng hóa đơn điện, nước và phí dịch vụ sau VAT, chúng ta sẽ thực hiện các bước sau:
+
+### 1. Tính tiền điện
+
+Sử dụng biểu giá bậc thang điện:
+
+- **0–50 kWh: 1.678 ₫/kWh**: 
+  - Số tiền cho 50 kWh đầu tiên: 
+    \\[
+    50 \\, \\text{kWh} \\times 1.678 \\, \\text{₫/kWh} = 83.900 \\, \\text{₫}
+    \\]
+
+- **51–100 kWh: 1.734 ₫/kWh**: 
+  - Số tiền cho 50 kWh tiếp theo (từ 51 đến 100 kWh):
+    \\[
+    50 \\, \\text{kWh} \\times 1.734 \\, \\text{₫/kWh} = 86.700 \\, \\text{₫}
+    \\]
+
+- **101–180 kWh: 2.014 ₫/kWh**: 
+  - Số tiền cho 80 kWh tiếp theo (từ 101 đến 180 kWh):
+    \\[
+    80 \\, \\text{kWh} \\times 2.014 \\, \\text{₫/kWh} = 161.120 \\, \\text{₫}
+    \\]
+
+- **Tổng tiền điện**:
+\\[
+\\text{Tổng tiền điện} = 83.900 \\, \\text{₫} + 86.700 \\, \\text{₫} + 161.120 \\, \\text{₫} = 331.720 \\, \\text{₫}
+\\]
+
+### 2. Tính tiền nước
+
+Sử dụng biểu giá bậc thang nước:
+
+- **0–10 m³: 4.000 ₫/m³**: 
+  - Số tiền cho 10 m³ đầu tiên:
+    \\[
+    10 \\, \\text{m³} \\times 4.000 \\, \\text{₫/m³} = 40.000 \\, \\text{₫}
+    \\]
+
+- **11–18 m³: 4.500 ₫/m³**: 
+  - Số tiền cho 8 m³ tiếp theo (từ 11 đến 18 m³):
+    \\[
+    8 \\, \\text{m³} \\times 4.500 \\, \\text{₫/m³} = 36.000 \\, \\text{₫}
+    \\]
+
+- **Tổng tiền nước**:
+\\[
+\\text{Tổng tiền nước} = 40.000 \\, \\text{₫} + 36.000 \\, \\text{₫} = 76.000 \\, \\text{₫}
+\\]
+
+### 3. Tính tổng tiền dịch vụ
+
+- **Phí dịch vụ cố định**: 20.000 ₫
+
+### 4. Tính tổng tiền trước VAT
+
+- **Tổng tiền trước VAT**:
+\\[
+\\text{Tổng tiền trước VAT} = \\text{Tổng tiền điện} + \\text{Tổng tiền nước} + \\text{Phí dịch vụ}
+\\]
+\\[
+= 331.720 \\, \\text{₫} + 76.000 \\, \\text{₫} + 20.000 \\, \\text{₫} = 427.720 \\, \\text{₫}
+\\]
+
+### 5. Tính VAT
+
+- **VAT 10%**:
+\\[
+\\text{VAT} = 427.720 \\, \\text{₫} \\times 10\% = 42.772 \\, \\text{₫}
+\\]
+
+### 6. Tính tổng tiền phải trả sau VAT
+
+- **Tổng tiền phải trả**:
+\\[
+\\text{Tổng tiền phải trả} = \\text{Tổng tiền trước VAT} + \\text{VAT}
+\\]
+\\[
+= 427.720 \\, \\text{₫} + 42.772 \\, \\text{₫} = 470.492 \\, \\text{₫}
+\\]
+
+### Kết luận
+
+Tổng tiền phải trả sau VAT là **470.492 ₫**.
+
+
+Công thức Fubini là một định lý quan trọng trong giải tích, cho phép chúng ta tính tích phân kép của một hàm bằng cách chuyển đổi thứ tự lấy tích phân. Công thức này được viết như sau:
+
+$$
+\\int_a^b \\int_c^d f(x, y) \, dy \, dx = \\int_c^d \\int_a^b f(x, y) \, dx \, dy.
+$$
+
+**Chứng minh công thức Fubini:**
+
+### Điều kiện áp dụng:
+Công thức Fubini áp dụng khi hàm \( f(x, y) \) liên tục trên hình chữ nhật \( R = [a, b] \times [c, d] \) trong mặt phẳng tọa độ. Nếu hàm không liên tục, ta cần kiểm tra thêm điều kiện hội tụ tuyệt đối.
+
+### Ý tưởng chứng minh:
+Ý tưởng cơ bản của công thức Fubini là chia miền tích phân \( R \) thành các hình chữ nhật nhỏ, sau đó tính tổng các giá trị của hàm \( f(x, y) \) trên từng hình chữ nhật nhỏ và lấy giới hạn khi kích thước hình chữ nhật nhỏ tiến về 0.
+
+### Các bước chứng minh:
+1. **Chia miền tích phân thành các hình chữ nhật nhỏ:**
+ - Xét hình chữ nhật \( R = [a, b] \times [c, d] \).
+ - Chia miền \( [a, b] \) thành \( n \) đoạn nhỏ bằng nhau với độ dài \( \Delta x_i = \frac{b - a}{n} \).
+ - Chia miền \( [c, d] \) thành \( m \) đoạn nhỏ bằng nhau với độ dài \( \Delta y_j = \frac{d - c}{m} \).
+
+2. **Tổng giá trị của hàm trên mỗi hình chữ nhật:**
+ - Mỗi hình chữ nhật nhỏ có tọa độ \( [x_i, x_{i+1}] \times [y_j, y_{j+1}] \), với \( x_i = a + i\Delta x \) và \( y_j = c + j\Delta y \).
+ - Giá trị của hàm \( f(x, y) \) tại một điểm trong hình chữ nhật được lấy xấp xỉ bởi \( f(x_i, y_j) \).
+ - Tích phân kép trên \( R \) được xấp xỉ bởi tổng:
+ \[
+ \sum_{i=1}^n \sum_{j=1}^m f(x_i, y_j) \Delta x \Delta y.
+ \]
+
+3. **Chuyển đổi thứ tự lấy tổng:**
+ - Do tính chất giao hoán của phép cộng, ta có thể đổi thứ tự lấy tổng:
+ $$
+ \sum_{i=1}^n \sum_{j=1}^m f(x_i, y_j) \Delta x \Delta y = \sum_{j=1}^m \sum_{i=1}^n f(x_i, y_j) \Delta x \Delta y.
+ $$
+
+4. **Lấy giới hạn khi \( n, m \to \infty \):**
+ - Khi kích thước hình chữ nhật nhỏ tiến về 0 (tức \( n, m \to \infty \)), tổng Riemann tiến về tích phân kép:
+ \[
+ \int_a^b \int_c^d f(x, y) \, dy \, dx = \int_c^d \int_a^b f(x, y) \, dx \, dy.
+ \]
+
+### Ý nghĩa hình học:
+Công thức Fubini cho phép chúng ta xem xét tích phân kép như việc tính tổng theo từng biến, lần lượt. Nó có thể được sử dụng để đơn giản hóa việc tính tích phân khi một thứ tự tích phân cụ thể dễ dàng hơn để xử lý.
+
+Nếu bạn muốn hiểu thêm qua ví dụ cụ thể hoặc hình ảnh minh họa, hãy cho tôi biết!
+
 # Non standard Markdown
 
 ## Claude

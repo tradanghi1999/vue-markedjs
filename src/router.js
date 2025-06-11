@@ -7,6 +7,7 @@ import StreamingMarkdown from './components/StreamingMarkdown.vue'
 import StreamingMarkedjs from './components/StreamingMarkedjs.vue'
 import ChatBoxOffical from './components/ChatBoxOffical.vue'
 import MaskedImage from './components/MaskedImage.vue'
+import DrawingCanvas from './components/DrawingCanvas.vue'
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: '/masked-image',
     name: 'MaskedImage',
     component: MaskedImage
+  },
+  {
+    path: '/drawing-canvas',
+    name: 'DrawingCanvas',
+    component: DrawingCanvas
   }
 ]
 

@@ -9,6 +9,7 @@
       <router-link to="/streaming-markedjs">Streaming Markedjs</router-link>
       <router-link to="/chatbox-offical">Chatbox official</router-link>
       <router-link to="/masked-image">Masked Image</router-link>
+      <router-link to="/drawing-canvas">Drawing Canvas</router-link>
     </nav>
     <router-view></router-view>
   </div>
